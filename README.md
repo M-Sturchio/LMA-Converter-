@@ -22,7 +22,8 @@ DF_new$LDM_kg<-DF_new$LDM/1000
 DF_new$LMA_kg.m2<-DF_new$LDM_kg/DF1$Area_m2
 hist(DF_new$LMA_kg.m2, breaks = 100)
 summary(DF_new$LMA_kg.m2)
-# quantile(DF_new$LMA_kg.m2, seq(0,1,0.05))
+
+quantile(DF_new$LMA_kg.m2, seq(0,1,0.05))
 
 rm(shit, good, goodshit)
 shit<-subset(DF_new, LMA_kg.m2 < 0.067)
